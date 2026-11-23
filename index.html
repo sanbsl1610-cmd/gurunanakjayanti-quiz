@@ -1,0 +1,1417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guru Nanak Jayanti 2026 Quiz - Central Railway Sr Sec School Bhusawal</title>
+<style>
+  :root {
+    --saffron: #FF7722;
+    --deep-blue: #0A2540;
+    --royal-blue: #1E40AF;
+    --gold: #F59E0B;
+    --light-gold: #FEF3C7;
+    --cream: #FFFBEB;
+    --white: #FFFFFF;
+    --green: #16A34A;
+    --red: #DC2626;
+    --text-dark: #1F2937;
+    --text-muted: #4B5563;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    background: linear-gradient(135deg, #0A2540 0%, #1E3A8A 50%, #B45309 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    color: var(--text-dark);
+  }
+
+  .app-container {
+    width: 100%;
+    max-width: 920px;
+    background: var(--white);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    border: 4px solid var(--gold);
+    position: relative;
+  }
+
+  /* Header Bar */
+  .top-bar {
+    background: linear-gradient(90deg, var(--deep-blue), var(--royal-blue));
+    color: var(--white);
+    padding: 12px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--gold);
+    font-size: 0.92rem;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .top-bar .school-mini {
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #FDE68A;
+  }
+
+  .live-stats {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-weight: 600;
+  }
+
+  .badge-score {
+    background: var(--saffron);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-weight: 700;
+  }
+
+  .badge-progress {
+    background: rgba(255,255,255,0.18);
+    padding: 4px 12px;
+    border-radius: 999px;
+  }
+
+  /* Slide Containers */
+  .slide {
+    display: none;
+    padding: 32px 36px;
+    animation: fadeIn 0.4s ease;
+  }
+
+  .slide.active {
+    display: block;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Welcome Slide */
+  .welcome-banner {
+    background: linear-gradient(135deg, #FF9933 0%, #F59E0B 45%, #1E3A8A 100%);
+    border-radius: 16px;
+    padding: 28px 24px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+    margin-bottom: 24px;
+  }
+
+  .khanda-emblem {
+    font-size: 3.4rem;
+    line-height: 1;
+    margin-bottom: 8px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+
+  .school-title {
+    font-size: 1.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    margin-bottom: 6px;
+  }
+
+  .event-subtitle {
+    font-size: 1.35rem;
+    font-weight: 700;
+    background: rgba(10, 37, 64, 0.75);
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 999px;
+    border: 1.5px solid #FDE68A;
+    margin: 8px 0 12px 0;
+    color: #FDE68A;
+  }
+
+  .wishes-box {
+    background: rgba(255, 255, 255, 0.95);
+    color: var(--deep-blue);
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    max-width: 720px;
+    margin: 0 auto;
+    border-left: 6px solid var(--saffron);
+    border-right: 6px solid var(--saffron);
+  }
+
+  /* Rules Card */
+  .rules-card {
+    background: var(--cream);
+    border: 2px solid #FCD34D;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 22px;
+  }
+
+  .rules-card h3 {
+    color: var(--deep-blue);
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .rules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .rule-pill {
+    background: white;
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 1px solid #FDE68A;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+  }
+
+  .rule-pill strong {
+    display: block;
+    color: var(--royal-blue);
+    margin-bottom: 3px;
+  }
+
+  .marking-strip {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .mark-plus {
+    background: #DCFCE7;
+    color: #166534;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: 1px solid #86EFAC;
+  }
+
+  .mark-minus {
+    background: #FEE2E2;
+    color: #991B1B;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: 1px solid #FCA5A5;
+  }
+
+  .mark-total {
+    background: #DBEAFE;
+    color: #1E40AF;
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    border: 1px solid #93C5FD;
+  }
+
+  /* Registration Form */
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 640px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .slide { padding: 20px; }
+    .school-title { font-size: 1.35rem; }
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .form-group label {
+    font-weight: 700;
+    color: var(--deep-blue);
+    font-size: 0.95rem;
+  }
+
+  .form-group input, .form-group select {
+    padding: 11px 14px;
+    border-radius: 10px;
+    border: 2px solid #CBD5E1;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+
+  .form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--saffron);
+  }
+
+  .error-msg {
+    color: var(--red);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 10px;
+    display: none;
+  }
+
+  /* Buttons */
+  .btn {
+    background: linear-gradient(90deg, var(--saffron), #EA580C);
+    color: white;
+    border: none;
+    padding: 13px 28px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 6px 16px rgba(234, 88, 12, 0.3);
+    transition: transform 0.15s, box-shadow 0.15s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(234, 88, 12, 0.4);
+  }
+
+  .btn:disabled {
+    background: #9CA3AF;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+
+  .btn-blue {
+    background: linear-gradient(90deg, var(--deep-blue), var(--royal-blue));
+    box-shadow: 0 6px 16px rgba(30, 64, 175, 0.3);
+  }
+
+  .btn-green {
+    background: linear-gradient(90deg, #15803D, #16A34A);
+    box-shadow: 0 6px 16px rgba(22, 163, 74, 0.3);
+  }
+
+  .btn-center {
+    margin-top: 22px;
+    text-align: center;
+  }
+
+  /* Section Intro Slide */
+  .section-intro-card {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 3px solid var(--gold);
+    border-radius: 18px;
+    padding: 32px 28px;
+    text-align: center;
+  }
+
+  .section-tag {
+    background: var(--deep-blue);
+    color: #FDE68A;
+    padding: 6px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    display: inline-block;
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+  }
+
+  .section-intro-title {
+    font-size: 1.8rem;
+    color: var(--deep-blue);
+    font-weight: 800;
+    margin-bottom: 14px;
+  }
+
+  .section-intro-desc {
+    font-size: 1.08rem;
+    line-height: 1.65;
+    color: var(--text-dark);
+    max-width: 700px;
+    margin: 0 auto 20px auto;
+  }
+
+  .section-highlights {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .highlight-chip {
+    background: white;
+    border: 1.5px solid var(--saffron);
+    color: var(--deep-blue);
+    padding: 7px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+
+  /* Question Slide */
+  .q-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E5E7EB;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .q-sec-label {
+    font-weight: 700;
+    color: var(--saffron);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+  }
+
+  .q-num-badge {
+    background: var(--deep-blue);
+    color: white;
+    padding: 5px 14px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.92rem;
+  }
+
+  .q-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--deep-blue);
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .option-btn {
+    text-align: left;
+    background: #F8FAFC;
+    border: 2px solid #CBD5E1;
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .option-btn:hover:not(:disabled) {
+    border-color: var(--royal-blue);
+    background: #EFF6FF;
+  }
+
+  .option-prefix {
+    background: var(--deep-blue);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .option-btn.correct {
+    background: #DCFCE7;
+    border-color: var(--green);
+    color: #14532D;
+  }
+  .option-btn.correct .option-prefix {
+    background: var(--green);
+  }
+
+  .option-btn.wrong {
+    background: #FEE2E2;
+    border-color: var(--red);
+    color: #7F1D1D;
+  }
+  .option-btn.wrong .option-prefix {
+    background: var(--red);
+  }
+
+  .feedback-box {
+    margin-top: 18px;
+    padding: 14px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    display: none;
+  }
+
+  .feedback-box.correct {
+    background: #DCFCE7;
+    color: #166534;
+    border-left: 5px solid var(--green);
+    display: block;
+  }
+
+  .feedback-box.wrong {
+    background: #FEE2E2;
+    color: #991B1B;
+    border-left: 5px solid var(--red);
+    display: block;
+  }
+
+  .q-footer {
+    margin-top: 22px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Result & Certificate Slide */
+  .result-header {
+    text-align: center;
+    background: linear-gradient(135deg, #0A2540, #1E3A8A);
+    color: white;
+    padding: 24px;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    border: 2px solid var(--gold);
+  }
+
+  .compliment-banner {
+    display: inline-block;
+    background: linear-gradient(90deg, #F59E0B, #FF7722);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 800;
+    padding: 8px 26px;
+    border-radius: 999px;
+    margin: 10px 0;
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+    letter-spacing: 0.5px;
+  }
+
+  .score-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 640px) {
+    .score-summary-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .stat-box {
+    background: rgba(255,255,255,0.12);
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .stat-val {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #FDE68A;
+  }
+
+  .stat-lbl {
+    font-size: 0.85rem;
+    color: #E2E8F0;
+  }
+
+  .cert-preview-wrapper {
+    text-align: center;
+    margin: 20px 0;
+    background: #F1F5F9;
+    padding: 16px;
+    border-radius: 14px;
+    border: 2px dashed #94A3B8;
+  }
+
+  #certCanvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
+  /* Thank You Slide */
+  .thankyou-card {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 3px solid var(--saffron);
+    border-radius: 18px;
+    padding: 36px 28px;
+    text-align: center;
+  }
+
+  .thankyou-card h2 {
+    font-size: 2rem;
+    color: var(--deep-blue);
+    margin-bottom: 14px;
+  }
+
+  .thankyou-note {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-dark);
+    max-width: 720px;
+    margin: 0 auto 24px auto;
+  }
+
+  .quizmaster-box {
+    background: var(--deep-blue);
+    color: white;
+    padding: 18px 28px;
+    border-radius: 14px;
+    display: inline-block;
+    border: 2px solid var(--gold);
+  }
+
+  .quizmaster-box .qm-role {
+    color: #FDE68A;
+    font-size: 0.92rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+  }
+
+  .quizmaster-box .qm-name {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 4px 0;
+  }
+
+  .quizmaster-box .qm-school {
+    font-size: 1rem;
+    color: #E2E8F0;
+  }
+</style>
+</head>
+<body>
+
+<div class="app-container">
+  <!-- Top Navigation / Live Status Bar -->
+  <div class="top-bar">
+    <div class="school-mini">🏫 Central Railway Sr Sec School Bhusawal</div>
+    <div class="live-stats" id="liveStats" style="display:none;">
+      <span class="badge-progress" id="progressLabel">Q 1 / 30</span>
+      <span class="badge-score" id="scoreLabel">Score: 0</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 1: WELCOME SLIDE -->
+  <div class="slide active" id="slide-welcome">
+    <div class="welcome-banner">
+      <div class="khanda-emblem">☬</div>
+      <div class="school-title">Central Railway Sr Sec School Bhusawal</div>
+      <div class="event-subtitle">✨ Guru Nanak Jayanti Special Quiz • 24 November 2026 ✨</div>
+      <div class="wishes-box">
+        🌸 Warm & Heartfelt Best Wishes on the Auspicious Occasion of <strong>Guru Nanak Jayanti (24 November 2026)</strong> from the <strong>Principal and Staff</strong> of Central Railway Sr Sec School Bhusawal! 🌸
+      </div>
+    </div>
+
+    <div class="rules-card">
+      <h3>📋 Quiz Structure & Marking Scheme (Classes 6 to 8)</h3>
+      <div class="rules-grid">
+        <div class="rule-pill">
+          <strong>Section 1 (10 Questions)</strong>
+          Life of Guru Nanak Dev Ji
+        </div>
+        <div class="rule-pill">
+          <strong>Section 2 (10 Questions)</strong>
+          Teachings of Guru Nanak Dev Ji
+        </div>
+        <div class="rule-pill">
+          <strong>Section 3 (10 Questions)</strong>
+          Relevance in Today's World
+        </div>
+      </div>
+      <div class="marking-strip">
+        <span class="mark-plus">✅ Correct Answer: +2 Marks</span>
+        <span class="mark-minus">❌ Wrong Answer: -1 Mark</span>
+        <span class="mark-total">🏆 Maximum Marks: 60</span>
+      </div>
+    </div>
+
+    <div class="btn-center">
+      <button class="btn" onclick="goToRegistration()">Proceed to Student Registration ➔</button>
+    </div>
+  </div>
+
+  <!-- SLIDE 2: STUDENT REGISTRATION -->
+  <div class="slide" id="slide-register">
+    <h2 style="color: var(--deep-blue); margin-bottom: 6px;">🧑‍🎓 Participant Registration</h2>
+    <p style="color: var(--text-muted); margin-bottom: 14px;">Please enter your details accurately. Your Full Name and Class will appear on your downloadable appreciation certificate.</p>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label for="stuName">Full Name *</label>
+        <input type="text" id="stuName" placeholder="e.g., Aarav Sharma" required>
+      </div>
+      <div class="form-group">
+        <label for="stuClass">Class *</label>
+        <select id="stuClass">
+          <option value="">-- Select Class --</option>
+          <option value="Class 6">Class 6</option>
+          <option value="Class 7">Class 7</option>
+          <option value="Class 8">Class 8</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="stuSection">Section *</label>
+        <input type="text" id="stuSection" placeholder="e.g., A, B, C" maxlength="10" required>
+      </div>
+      <div class="form-group">
+        <label for="stuMobile">Mobile Number *</label>
+        <input type="tel" id="stuMobile" placeholder="e.g., 9876543210" maxlength="10" required>
+      </div>
+    </div>
+    <div class="error-msg" id="regError">⚠️ Please fill in all fields properly (enter a valid 10-digit mobile number).</div>
+
+    <div class="btn-center">
+      <button class="btn" onclick="startQuiz()">Start Quiz (Section 1) 🚀</button>
+    </div>
+  </div>
+
+  <!-- SLIDE 3: SECTION INTRODUCTION SLIDE -->
+  <div class="slide" id="slide-section-intro">
+    <div class="section-intro-card">
+      <div class="section-tag" id="secIntroTag">SECTION 1 OF 3</div>
+      <div class="section-intro-title" id="secIntroTitle">Life of Guru Nanak Dev Ji</div>
+      <p class="section-intro-desc" id="secIntroDesc"></p>
+      <div class="section-highlights" id="secIntroHighlights"></div>
+      <div class="btn-center">
+        <button class="btn btn-blue" onclick="beginSectionQuestions()">Begin Section Questions ➔</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 4: QUESTION SLIDE -->
+  <div class="slide" id="slide-question">
+    <div class="q-header">
+      <span class="q-sec-label" id="qSecLabel">Section 1: Life of Guru Nanak Dev Ji</span>
+      <span class="q-num-badge" id="qNumBadge">Question 1 of 10</span>
+    </div>
+    <div class="q-text" id="qText">Question text goes here?</div>
+    <div class="options-list" id="optionsContainer"></div>
+    <div class="feedback-box" id="feedbackBox"></div>
+    <div class="q-footer">
+      <button class="btn" id="nextBtn" onclick="nextStep()" style="display:none;">Next ➔</button>
+    </div>
+  </div>
+
+  <!-- SLIDE 5: RESULT & CERTIFICATE SLIDE -->
+  <div class="slide" id="slide-result">
+    <div class="result-header">
+      <div style="font-size: 1.1rem; color: #FDE68A;">🎉 Quiz Completed! Well Done, <strong id="resStudentName">Student</strong>!</div>
+      <div class="compliment-banner" id="resCompliment">OUTSTANDING</div>
+      <div style="font-size: 0.95rem; color: #E2E8F0;" id="resStudentMeta">Class 6 - Section A | Mobile: 9999999999</div>
+
+      <div class="score-summary-grid">
+        <div class="stat-box">
+          <div class="stat-val" id="statFinalScore">0 / 60</div>
+          <div class="stat-lbl">Final Score</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="statCorrect" style="color:#86EFAC;">0</div>
+          <div class="stat-lbl">Correct (+2)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="statWrong" style="color:#FCA5A5;">0</div>
+          <div class="stat-lbl">Wrong (-1)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val" id="statAccuracy">0%</div>
+          <div class="stat-lbl">Accuracy</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cert-preview-wrapper">
+      <h3 style="color: var(--deep-blue); margin-bottom: 10px;">📜 Your Official Certificate of Appreciation</h3>
+      <canvas id="certCanvas" width="1100" height="780"></canvas>
+      <div style="margin-top: 14px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-green" onclick="downloadCertificateJPG()">⬇️ Download Certificate (JPG)</button>
+        <button class="btn btn-blue" onclick="goToThankYou()">Proceed to Thank You Slide ➔</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SLIDE 6: THANK YOU SLIDE -->
+  <div class="slide" id="slide-thankyou">
+    <div class="thankyou-card">
+      <div style="font-size: 3rem; margin-bottom: 8px;">🙏✨</div>
+      <h2>Thank You for Participating!</h2>
+      <p class="thankyou-note">
+        Dear Students, thank you for your enthusiastic participation in the <strong>Guru Nanak Jayanti 2026 Quiz</strong>. May the timeless message of Guru Nanak Dev Ji — <em>"Kirat Karo, Naam Japo, Vand Chhako"</em> (Honest Living, Meditating on Truth, and Sharing with Others) — inspire you to become compassionate, truthful, and responsible citizens of India.
+      </p>
+      <div class="quizmaster-box">
+        <div class="qm-role">Quiz Master & School Coordinator</div>
+        <div class="qm-name">Sh. S.K. Upadhyay</div>
+        <div class="qm-school">Librarian, Central Railway Sr Sec School Bhusawal</div>
+      </div>
+      <div class="btn-center">
+        <button class="btn" onclick="backToCertificate()">⬅️ Back to Certificate</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ================= SCORM 1.2 API WRAPPER =================
+var scormAPI = null;
+function findAPI(win) {
+  var findAttempts = 0;
+  while ((win.API == null) && (win.parent != null) && (win.parent != win)) {
+    findAttempts++;
+    if (findAttempts > 10) return null;
+    win = win.parent;
+  }
+  return win.API;
+}
+function initSCORM() {
+  scormAPI = findAPI(window);
+  if (!scormAPI && window.opener) {
+    scormAPI = findAPI(window.opener);
+  }
+  if (scormAPI) {
+    scormAPI.LMSInitialize("");
+    scormAPI.LMSSetValue("cmi.core.lesson_status", "incomplete");
+    scormAPI.LMSSetValue("cmi.core.score.min", "0");
+    scormAPI.LMSSetValue("cmi.core.score.max", "60");
+    scormAPI.LMSCommit("");
+  }
+}
+function finishSCORM(finalScore, studentInfo) {
+  if (scormAPI) {
+    var normalizedScore = Math.max(0, finalScore);
+    scormAPI.LMSSetValue("cmi.core.score.raw", normalizedScore.toString());
+    scormAPI.LMSSetValue("cmi.core.lesson_status", finalScore >= 30 ? "passed" : "completed");
+    scormAPI.LMSSetValue("cmi.suspend_data", JSON.stringify(studentInfo));
+    scormAPI.LMSCommit("");
+    scormAPI.LMSFinish("");
+  }
+}
+window.onload = function() {
+  initSCORM();
+};
+
+// ================= QUIZ DATA (3 SECTIONS x 10 QUESTIONS) =================
+const quizSections = [
+  {
+    id: 1,
+    title: "Section 1: Life of Guru Nanak Dev Ji",
+    tag: "SECTION 1 OF 3",
+    description: "Welcome to Section 1! Explore the inspiring life journey of Sri Guru Nanak Dev Ji — from his birth in 1469 at Talwandi, his childhood lessons in honesty and compassion, his four great spiritual journeys (Udasis) across India and abroad, to establishing the community of Kartarpur.",
+    highlights: ["Birth & Childhood", "Sacha Sauda", "Four Udasis (Journeys)", "Kartarpur Sahib"],
+    questions: [
+      {
+        q: "In which year was Sri Guru Nanak Dev Ji born?",
+        options: ["1469 AD", "1499 AD", "1539 AD", "1604 AD"],
+        ans: 0,
+        exp: "Guru Nanak Dev Ji was born in 1469 AD on Kartik Purnima."
+      },
+      {
+        q: "What is the birthplace of Guru Nanak Dev Ji, which is now known as Nankana Sahib?",
+        options: ["Amritsar", "Talwandi", "Sultanpur Lodhi", "Kartarpur"],
+        ans: 1,
+        exp: "Guru Nanak Dev Ji was born at Rai Bhoi Di Talwandi (now Nankana Sahib)."
+      },
+      {
+        q: "What were the names of Guru Nanak Dev Ji's parents?",
+        options: ["Mehta Kalu Ji and Mata Tripta Ji", "Baba Buddha Ji and Mata Khivi Ji", "Bhai Mardana Ji and Mata Sulakhni Ji", "Guru Angad Dev Ji and Mata Gujri Ji"],
+        ans: 0,
+        exp: "His father was Mehta Kalu Ji and his mother was Mata Tripta Ji."
+      },
+      {
+        q: "Who was Guru Nanak Dev Ji's elder sister who always supported and understood his spiritual nature?",
+        options: ["Bebe Nanaki Ji", "Mata Sundari Ji", "Mai Bhago Ji", "Mata Sahib Kaur Ji"],
+        ans: 0,
+        exp: "Bebe Nanaki Ji was his elder sister and is revered as his first follower."
+      },
+      {
+        q: "In the famous childhood incident 'Sacha Sauda' (True Bargain), how did young Nanak spend the 20 rupees given by his father?",
+        options: ["Bought silk clothes", "Fed hungry sadhus and poor people", "Purchased horses", "Saved it in a temple box"],
+        ans: 1,
+        exp: "He used the money to buy food and feed hungry saints, calling it the true bargain."
+      },
+      {
+        q: "Who was the lifelong Muslim companion and Rabab player who accompanied Guru Nanak Dev Ji on his travels?",
+        options: ["Bhai Gurdas Ji", "Bhai Mardana Ji", "Bhai Lehna Ji", "Bhai Mani Singh Ji"],
+        ans: 1,
+        exp: "Bhai Mardana Ji accompanied Guru Nanak Dev Ji and played the Rabab while Guru Ji sang divine hymns."
+      },
+      {
+        q: "What are the four major spiritual journeys undertaken by Guru Nanak Dev Ji in all four directions called?",
+        options: ["Yatras", "Udasis", "Parikramas", "Safars"],
+        ans: 1,
+        exp: "His four extensive missionary journeys across Asia are known as 'Udasis'."
+      },
+      {
+        q: "At which river in Sultanpur Lodhi did Guru Nanak Dev Ji disappear for three days and emerge with his divine message?",
+        options: ["River Beas", "River Kali Bein", "River Sutlej", "River Ravi"],
+        ans: 1,
+        exp: "At River Kali Bein in Sultanpur Lodhi, he had his profound spiritual revelation."
+      },
+      {
+        q: "Which town did Guru Nanak Dev Ji establish on the banks of the River Ravi where he spent his final years farming and teaching?",
+        options: ["Anandpur Sahib", "Kartarpur", "Patna Sahib", "Tarn Taran"],
+        ans: 1,
+        exp: "He founded Kartarpur ('City of the Creator') on the banks of River Ravi."
+      },
+      {
+        q: "Whom did Guru Nanak Dev Ji appoint as his successor, who became the second Sikh Guru (Guru Angad Dev Ji)?",
+        options: ["Bhai Bala Ji", "Bhai Lehna Ji", "Baba Sri Chand Ji", "Baba Lakhmi Das Ji"],
+        ans: 1,
+        exp: "Guru Nanak Dev Ji chose his devoted disciple Bhai Lehna Ji and named him Guru Angad Dev Ji."
+      }
+    ]
+  },
+  {
+    id: 2,
+    title: "Section 2: Teachings of Guru Nanak Dev Ji",
+    tag: "SECTION 2 OF 3",
+    description: "Welcome to Section 2! Let us reflect on the eternal spiritual and moral teachings of Guru Nanak Dev Ji — the Three Golden Pillars of life, Ik Onkar (Oneness of God), selfless service (Sewa), and the institution of Langar.",
+    highlights: ["Ik Onkar", "Three Golden Pillars", "Langar & Pangat", "Equality & Humility"],
+    questions: [
+      {
+        q: "What does 'Ik Onkar' (ੴ), the opening phrase of the Mool Mantar composed by Guru Nanak Dev Ji, mean?",
+        options: ["There are many gods", "There is Only One Supreme Creator", "Worship only idols", "Nature is separate from God"],
+        ans: 1,
+        exp: "'Ik Onkar' signifies that there is One Universal Creator God."
+      },
+      {
+        q: "Which of the following are the 'Three Golden Pillars' of Guru Nanak Dev Ji's teachings?",
+        options: ["Naam Japo, Kirat Karo, Vand Chhako", "Satya, Ahimsa, Asteya", "Gyan, Bhakti, Karma", "Dhyan, Tapasya, Vairagya"],
+        ans: 0,
+        exp: "Naam Japo (meditate on God), Kirat Karo (earn honestly), and Vand Chhako (share with others) are the three pillars."
+      },
+      {
+        q: "What does the teaching 'Kirat Karo' instruct every human being to do?",
+        options: ["Leave family and live in forests", "Earn an honest living through hard work", "Depend on charity", "Accumulate wealth by any means"],
+        ans: 1,
+        exp: "'Kirat Karo' means earning an honest, dignified livelihood through sincere effort."
+      },
+      {
+        q: "What is the meaning of 'Vand Chhako' taught by Guru Nanak Dev Ji?",
+        options: ["Keep all earnings for yourself", "Share your food and earnings with the needy", "Fast every week", "Travel alone"],
+        ans: 1,
+        exp: "'Vand Chhako' teaches sharing one's wealth, food, and blessings with others."
+      },
+      {
+        q: "Which unique community kitchen tradition was started by Guru Nanak Dev Ji to promote equality without caste or status distinction?",
+        options: ["Bhandara", "Langar", "Dharamshala", "Prasad"],
+        ans: 1,
+        exp: "Guru Nanak Dev Ji initiated 'Langar', where everyone sits together in a row (Pangat) and eats the same meal."
+      },
+      {
+        q: "In Guru Nanak Dev Ji's famous hymn 'So Kyon Manda Aakhiye...', whose dignity and equal respect did he strongly champion?",
+        options: ["Kings and Rulers", "Women", "Merchants", "Soldiers"],
+        ans: 1,
+        exp: "He asked, 'Why call her inferior, from whom kings are born?' — championing women's equality."
+      },
+      {
+        q: "In the famous story of Malik Bhago and Bhai Lalo, why did Guru Nanak Dev Ji prefer Bhai Lalo's coarse bread over Malik Bhago's feast?",
+        options: ["Bhai Lalo's bread was sweeter", "Bhai Lalo earned his bread through honest labour", "Malik Bhago forgot to invite him", "Guru Ji was not hungry"],
+        ans: 1,
+        exp: "Bhai Lalo's food was earned through honest hard work, whereas Malik Bhago's wealth came from exploiting the poor."
+      },
+      {
+        q: "In which sacred scripture are the 974 hymns composed by Guru Nanak Dev Ji preserved?",
+        options: ["Dasam Granth", "Sri Guru Granth Sahib Ji", "Janamsakhis", "Varan Bhai Gurdas"],
+        ans: 1,
+        exp: "Guru Nanak Dev Ji's 974 poetic hymns are compiled in Sri Guru Granth Sahib Ji."
+      },
+      {
+        q: "What is the name of the famous morning prayer composed by Guru Nanak Dev Ji that begins with the Mool Mantar?",
+        options: ["Rehras Sahib", "Japji Sahib", "Sukhmani Sahib", "Anand Sahib"],
+        ans: 1,
+        exp: "Japji Sahib is the foundational morning prayer composed by Guru Nanak Dev Ji."
+      },
+      {
+        q: "According to Guru Nanak Dev Ji, which virtue is the very essence of all virtues ('Mithat Neevin Nanka Gun Changiaiyan Tatt')?",
+        options: ["Anger and Pride", "Sweetness and Humility", "Wealth and Power", "Strict Silence"],
+        ans: 1,
+        exp: "Guru Ji taught that sweetness of speech and humility are the essence of all good qualities."
+      }
+    ]
+  },
+  {
+    id: 3,
+    title: "Section 3: Relevance in Today's World",
+    tag: "SECTION 3 OF 3",
+    description: "Welcome to Section 3! Discover how Guru Nanak Dev Ji's 550+ year old philosophy provides practical solutions to modern global challenges — environmental protection, zero hunger, social harmony, ethical leadership, and youth character.",
+    highlights: ["Environmental Conservation", "Zero Hunger & SDGs", "Universal Brotherhood", "Ethical Living"],
+    questions: [
+      {
+        q: "In Guru Nanak Dev Ji's verse 'Pawan Guru Pani Pita Mata Dharat Mahat', what are Air, Water, and Earth compared to?",
+        options: ["Wealth, Gold, and Silver", "Teacher (Guru), Father, and Great Mother", "Kings, Soldiers, and Citizens", "Clouds, Rivers, and Mountains"],
+        ans: 1,
+        exp: "Guru Ji revered Air as the Guru, Water as the Father, and Earth as the Great Mother — a timeless call for environmental protection."
+      },
+      {
+        q: "How does the tradition of 'Langar' directly contribute to the United Nations Sustainable Development Goals (SDGs) today?",
+        options: ["Promoting space exploration", "Zero Hunger and Reducing Inequalities", "Increasing industrial taxes", "Building highways"],
+        ans: 1,
+        exp: "Langar feeds millions daily for free across the world without discrimination, supporting UN SDG 2 (Zero Hunger) and SDG 10 (Reduced Inequalities)."
+      },
+      {
+        q: "In today's diverse global society, how does Guru Nanak Dev Ji's message of 'Sarbat Da Bhala' guide humanity?",
+        options: ["Wishing only for one's own family", "Praying and working for the welfare and peace of all humanity", "Competing against neighbours", "Isolating communities"],
+        ans: 1,
+        exp: "'Sarbat Da Bhala' means seeking the well-being, peace, and prosperity of every person on Earth."
+      },
+      {
+        q: "How can a student practice 'Kirat Karo' in school life today?",
+        options: ["Copying homework from friends", "Studying sincerely and writing exams with complete honesty", "Skipping classes", "Blaming others for mistakes"],
+        ans: 1,
+        exp: "For students, 'Kirat Karo' means honest effort, sincere study, and integrity in schoolwork."
+      },
+      {
+        q: "During natural disasters like floods, earthquakes, or pandemics, how do volunteers inspired by Guru Nanak Dev Ji respond worldwide?",
+        options: ["By setting up free community kitchens and medical relief camps (Sewa)", "By closing all doors", "By charging high prices for food", "By waiting for others to help"],
+        ans: 0,
+        exp: "Selfless service (Nishkam Sewa) inspires volunteers globally to provide free Langar, shelter, and aid during crises."
+      },
+      {
+        q: "In an age of social media arguments and division, which teaching of Guru Nanak Dev Ji promotes peaceful dialogue?",
+        options: ["Speaking harshly to win debates", "Listening with patience and speaking sweet, truthful words", "Spreading rumours", "Ignoring everyone"],
+        ans: 1,
+        exp: "Guru Ji advised speaking truth with sweetness and listening with humility to bridge divides."
+      },
+      {
+        q: "What modern social evil did Guru Nanak Dev Ji reject over 500 years ago that remains crucial for building an inclusive India today?",
+        options: ["Planting trees", "Caste discrimination and untouchability", "Reading books", "Helping elders"],
+        ans: 1,
+        exp: "He strongly rejected caste hierarchy and promoted universal human dignity and equality."
+      },
+      {
+        q: "How does Guru Nanak Dev Ji's teaching on honest living ('Kirat Karo') help fight corruption in modern society?",
+        options: ["It encourages bribery", "It teaches citizens to reject ill-gotten money and value ethical work", "It supports shortcuts to success", "It ignores civic duties"],
+        ans: 1,
+        exp: "Valuing honest labour over unfair gain directly builds integrity and an anti-corruption mindset."
+      },
+      {
+        q: "When students share their tiffin, books, or time to help a classmate in need, which principle of Guru Nanak Dev Ji are they living?",
+        options: ["Vand Chhako (Sharing & Caring)", "Ahankar (Pride)", "Lobh (Greed)", "Krodh (Anger)"],
+        ans: 0,
+        exp: "Sharing food, knowledge, and kindness with classmates is a practical example of 'Vand Chhako'."
+      },
+      {
+        q: "What is the ultimate goal of human life according to Guru Nanak Dev Ji's famous quote: 'Truth is the highest virtue, but higher still is...'?",
+        options: ["Wealthy living", "Truthful living", "Famous living", "Powerful living"],
+        ans: 1,
+        exp: "Guru Nanak Dev Ji famously said: 'Truth is higher than everything; but higher still is truthful living.'"
+      }
+    ]
+  }
+];
+
+// ================= STATE VARIABLES =================
+let student = { name: "", cls: "", sec: "", mobile: "" };
+let currentSecIdx = 0;
+let currentQIdx = 0;
+let totalScore = 0;
+let correctCount = 0;
+let wrongCount = 0;
+let answeredCurrent = false;
+
+// ================= NAVIGATION & LOGIC =================
+function showSlide(slideId) {
+  document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+  document.getElementById(slideId).classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function goToRegistration() {
+  showSlide('slide-register');
+}
+
+function startQuiz() {
+  const name = document.getElementById('stuName').value.trim();
+  const cls = document.getElementById('stuClass').value;
+  const sec = document.getElementById('stuSection').value.trim().toUpperCase();
+  const mobile = document.getElementById('stuMobile').value.trim();
+  const err = document.getElementById('regError');
+
+  if (!name || !cls || !sec || !/^\d{10}$/.test(mobile)) {
+    err.style.display = 'block';
+    return;
+  }
+  err.style.display = 'none';
+
+  student = { name, cls, sec, mobile };
+  currentSecIdx = 0;
+  currentQIdx = 0;
+  totalScore = 0;
+  correctCount = 0;
+  wrongCount = 0;
+
+  document.getElementById('liveStats').style.display = 'flex';
+  updateTopStats();
+  loadSectionIntro(0);
+}
+
+function updateTopStats() {
+  const globalQNum = currentSecIdx * 10 + currentQIdx + 1;
+  document.getElementById('progressLabel').textContent = `Q ${Math.min(globalQNum, 30)} / 30`;
+  document.getElementById('scoreLabel').textContent = `Score: ${totalScore}`;
+}
+
+function loadSectionIntro(secIdx) {
+  const sec = quizSections[secIdx];
+  document.getElementById('secIntroTag').textContent = sec.tag;
+  document.getElementById('secIntroTitle').textContent = sec.title;
+  document.getElementById('secIntroDesc').textContent = sec.description;
+
+  const hlContainer = document.getElementById('secIntroHighlights');
+  hlContainer.innerHTML = "";
+  sec.highlights.forEach(h => {
+    const chip = document.createElement('span');
+    chip.className = 'highlight-chip';
+    chip.textContent = "✦ " + h;
+    hlContainer.appendChild(chip);
+  });
+
+  showSlide('slide-section-intro');
+}
+
+function beginSectionQuestions() {
+  currentQIdx = 0;
+  loadQuestion();
+  showSlide('slide-question');
+}
+
+function loadQuestion() {
+  answeredCurrent = false;
+  updateTopStats();
+  const sec = quizSections[currentSecIdx];
+  const qObj = sec.questions[currentQIdx];
+
+  document.getElementById('qSecLabel').textContent = sec.title;
+  document.getElementById('qNumBadge').textContent = `Question ${currentQIdx + 1} of 10`;
+  document.getElementById('qText').textContent = qObj.q;
+
+  const optContainer = document.getElementById('optionsContainer');
+  optContainer.innerHTML = "";
+  const letters = ["A", "B", "C", "D"];
+
+  qObj.options.forEach((optText, idx) => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = `<span class="option-prefix">${letters[idx]}</span> <span>${optText}</span>`;
+    btn.onclick = () => selectAnswer(idx, btn);
+    optContainer.appendChild(btn);
+  });
+
+  const fb = document.getElementById('feedbackBox');
+  fb.className = 'feedback-box';
+  fb.textContent = '';
+
+  const nextBtn = document.getElementById('nextBtn');
+  nextBtn.style.display = 'none';
+  if (currentSecIdx === 2 && currentQIdx === 9) {
+    nextBtn.textContent = "Finish Quiz & View Result 🏆";
+  } else if (currentQIdx === 9) {
+    nextBtn.textContent = `Proceed to Section ${currentSecIdx + 2} ➔`;
+  } else {
+    nextBtn.textContent = "Next Question ➔";
+  }
+}
+
+function selectAnswer(selectedIdx, clickedBtn) {
+  if (answeredCurrent) return;
+  answeredCurrent = true;
+
+  const qObj = quizSections[currentSecIdx].questions[currentQIdx];
+  const allBtns = document.querySelectorAll('.option-btn');
+  allBtns.forEach(b => b.disabled = true);
+
+  const fb = document.getElementById('feedbackBox');
+  if (selectedIdx === qObj.ans) {
+    clickedBtn.classList.add('correct');
+    totalScore += 2;
+    correctCount++;
+    fb.className = 'feedback-box correct';
+    fb.innerHTML = `✅ <strong>Correct! (+2 Marks)</strong> — ${qObj.exp}`;
+  } else {
+    clickedBtn.classList.add('wrong');
+    allBtns[qObj.ans].classList.add('correct');
+    totalScore -= 1;
+    wrongCount++;
+    fb.className = 'feedback-box wrong';
+    fb.innerHTML = `❌ <strong>Wrong! (-1 Mark)</strong> — ${qObj.exp}`;
+  }
+
+  document.getElementById('scoreLabel').textContent = `Score: ${totalScore}`;
+  document.getElementById('nextBtn').style.display = 'inline-flex';
+}
+
+function nextStep() {
+  if (currentQIdx < 9) {
+    currentQIdx++;
+    loadQuestion();
+  } else if (currentSecIdx < 2) {
+    currentSecIdx++;
+    loadSectionIntro(currentSecIdx);
+  } else {
+    showFinalResult();
+  }
+}
+
+function getCompliment(score) {
+  if (score >= 45) return "🌟 OUTSTANDING 🌟";
+  if (score >= 40) return "👏 VERY GOOD 👏";
+  if (score >= 30) return "👍 GOOD 👍";
+  return "💪 TRY ... TRY ... TRY 💪";
+}
+
+function getPlainCompliment(score) {
+  if (score >= 45) return "OUTSTANDING";
+  if (score >= 40) return "VERY GOOD";
+  if (score >= 30) return "GOOD";
+  return "TRY ... TRY ... TRY";
+}
+
+function showFinalResult() {
+  document.getElementById('liveStats').style.display = 'none';
+  document.getElementById('resStudentName').textContent = student.name;
+  document.getElementById('resCompliment').textContent = getCompliment(totalScore);
+  document.getElementById('resStudentMeta').textContent = `${student.cls} - Section ${student.sec} | Mobile: ${student.mobile}`;
+
+  document.getElementById('statFinalScore').textContent = `${totalScore} / 60`;
+  document.getElementById('statCorrect').textContent = correctCount;
+  document.getElementById('statWrong').textContent = wrongCount;
+  const accuracy = Math.round((correctCount / 30) * 100);
+  document.getElementById('statAccuracy').textContent = `${accuracy}%`;
+
+  drawCertificate();
+  finishSCORM(totalScore, {
+    student: student,
+    score: totalScore,
+    correct: correctCount,
+    wrong: wrongCount,
+    compliment: getPlainCompliment(totalScore)
+  });
+
+  showSlide('slide-result');
+}
+
+// ================= CERTIFICATE GENERATOR (HTML5 CANVAS -> JPG) =================
+function drawCertificate() {
+  const canvas = document.getElementById('certCanvas');
+  const ctx = canvas.getContext('2d');
+  const W = canvas.width;
+  const H = canvas.height;
+
+  // Background
+  const bgGrad = ctx.createLinearGradient(0, 0, W, H);
+  bgGrad.addColorStop(0, '#FFFDF7');
+  bgGrad.addColorStop(0.5, '#FEF3C7');
+  bgGrad.addColorStop(1, '#FFFBEB');
+  ctx.fillStyle = bgGrad;
+  ctx.fillRect(0, 0, W, H);
+
+  // Outer Royal Blue Border
+  ctx.strokeStyle = '#0A2540';
+  ctx.lineWidth = 14;
+  ctx.strokeRect(22, 22, W - 44, H - 44);
+
+  // Inner Saffron & Gold Double Border
+  ctx.strokeStyle = '#FF7722';
+  ctx.lineWidth = 5;
+  ctx.strokeRect(38, 38, W - 76, H - 76);
+
+  ctx.strokeStyle = '#D97706';
+  ctx.lineWidth = 2;
+  ctx.strokeRect(48, 48, W - 96, H - 96);
+
+  // Top Header Ribbon
+  ctx.fillStyle = '#0A2540';
+  ctx.fillRect(70, 68, W - 140, 74);
+  ctx.strokeStyle = '#F59E0B';
+  ctx.lineWidth = 3;
+  ctx.strokeRect(70, 68, W - 140, 74);
+
+  ctx.fillStyle = '#FDE68A';
+  ctx.font = 'bold 28px Georgia, serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('CENTRAL RAILWAY SR SEC SCHOOL BHUSAWAL', W / 2, 114);
+
+  // Emblem & Certificate Title
+  ctx.fillStyle = '#EA580C';
+  ctx.font = 'bold 34px Georgia, serif';
+  ctx.fillText('☬ CERTIFICATE OF APPRECIATION ☬', W / 2, 195);
+
+  ctx.fillStyle = '#1E3A8A';
+  ctx.font = 'bold 20px Arial, sans-serif';
+  ctx.fillText('GURU NANAK JAYANTI CELEBRATION QUIZ • 24 NOVEMBER 2026', W / 2, 232);
+
+  // Decorative Divider
+  ctx.beginPath();
+  ctx.moveTo(220, 250);
+  ctx.lineTo(W - 220, 250);
+  ctx.strokeStyle = '#F59E0B';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+
+  // Body Text
+  ctx.fillStyle = '#374151';
+  ctx.font = 'italic 22px Georgia, serif';
+  ctx.fillText('This certificate is proudly presented to', W / 2, 295);
+
+  // Student Name
+  ctx.fillStyle = '#0A2540';
+  ctx.font = 'bold 42px Georgia, serif';
+  ctx.fillText(student.name.toUpperCase(), W / 2, 352);
+
+  // Underline for Student Name
+  const nameWidth = Math.min(ctx.measureText(student.name.toUpperCase()).width + 60, 760);
+  ctx.beginPath();
+  ctx.moveTo((W - nameWidth) / 2, 365);
+  ctx.lineTo((W + nameWidth) / 2, 365);
+  ctx.strokeStyle = '#FF7722';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+
+  // Class & Section
+  ctx.fillStyle = '#1F2937';
+  ctx.font = 'bold 22px Arial, sans-serif';
+  ctx.fillText(`of ${student.cls}, Section '${student.sec}'`, W / 2, 405);
+
+  // Appreciation Paragraph
+  ctx.fillStyle = '#1F2937';
+  ctx.font = '20px Georgia, serif';
+  ctx.fillText('for enthusiastic participation and commendable performance in the', W / 2, 452);
+  ctx.font = 'bold 21px Georgia, serif';
+  ctx.fillStyle = '#1E3A8A';
+  ctx.fillText('Guru Nanak Dev Ji Quiz (Life, Teachings & Modern Relevance)', W / 2, 484);
+
+  // Score & Grade Badge Box
+  const ratingText = getPlainCompliment(totalScore);
+  ctx.fillStyle = '#0A2540';
+  ctx.beginPath();
+  ctx.roundRect(W / 2 - 290, 508, 580, 50, 25);
+  ctx.fill();
+  ctx.strokeStyle = '#F59E0B';
+  ctx.lineWidth = 2.5;
+  ctx.stroke();
+
+  ctx.fillStyle = '#FDE68A';
+  ctx.font = 'bold 21px Arial, sans-serif';
+  ctx.fillText(`Score: ${totalScore} / 60   |   Performance: ${ratingText}`, W / 2, 540);
+
+  // Best Wishes Line
+  ctx.fillStyle = '#9A3412';
+  ctx.font = 'italic bold 19px Georgia, serif';
+  ctx.fillText('We extend our heartiest best wishes for a bright, virtuous, and successful future.', W / 2, 592);
+
+  // Signatures Section
+  // Left Signature: School Coordinator
+  ctx.strokeStyle = '#0A2540';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(130, 675);
+  ctx.lineTo(430, 675);
+  ctx.stroke();
+
+  ctx.fillStyle = '#1E3A8A';
+  ctx.font = 'italic bold 22px Georgia, serif';
+  ctx.fillText('Santosh Kumar Upadhyay', 280, 665);
+
+  ctx.fillStyle = '#0A2540';
+  ctx.font = 'bold 17px Arial, sans-serif';
+  ctx.fillText('Santosh Kumar Upadhyay', 280, 700);
+  ctx.fillStyle = '#4B5563';
+  ctx.font = '15px Arial, sans-serif';
+  ctx.fillText('School Coordinator & Librarian', 280, 722);
+
+  // Center Gold Seal
+  ctx.beginPath();
+  ctx.arc(W / 2, 682, 42, 0, Math.PI * 2);
+  ctx.fillStyle = '#F59E0B';
+  ctx.fill();
+  ctx.strokeStyle = '#92400E';
+  ctx.lineWidth = 3;
+  ctx.stroke();
+
+  ctx.fillStyle = '#0A2540';
+  ctx.font = 'bold 13px Arial, sans-serif';
+  ctx.fillText('CRSSS', W / 2, 678);
+  ctx.fillText('BHUSAWAL', W / 2, 695);
+
+  // Right Signature: Principal
+  ctx.strokeStyle = '#0A2540';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(W - 430, 675);
+  ctx.lineTo(W - 130, 675);
+  ctx.stroke();
+
+  ctx.fillStyle = '#1E3A8A';
+  ctx.font = 'italic bold 22px Georgia, serif';
+  ctx.fillText('Satya Narayan Chhawal', W - 280, 665);
+
+  ctx.fillStyle = '#0A2540';
+  ctx.font = 'bold 17px Arial, sans-serif';
+  ctx.fillText('Satya Narayan Chhawal', W - 280, 700);
+  ctx.fillStyle = '#4B5563';
+  ctx.font = '15px Arial, sans-serif';
+  ctx.fillText('Principal, CRSSS Bhusawal', W - 280, 722);
+}
+
+function downloadCertificateJPG() {
+  const canvas = document.getElementById('certCanvas');
+  const link = document.createElement('a');
+  const safeName = student.name.replace(/[^a-zA-Z0-9]/g, '_');
+  link.download = `Guru_Nanak_Jayanti_2026_Certificate_${safeName}.jpg`;
+  link.href = canvas.toDataURL('image/jpeg', 0.95);
+  link.click();
+}
+
+function goToThankYou() {
+  showSlide('slide-thankyou');
+}
+
+function backToCertificate() {
+  showSlide('slide-result');
+}
+</script>
+
+</body>
+</html>
